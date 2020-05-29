@@ -12,7 +12,7 @@ query1 ="""
 select NAME_BABY, sum(BABY_COUNT)
 from NAMES_POPULARITY
 inner join NAMES1 using(name_id) 
-GROUP BY NAME_BABY;
+GROUP BY NAME_BABY
 """
 cursor.execute(query1)
 
@@ -24,7 +24,7 @@ query2 ="""
 select NAME_BABY,(SUM(BABY_COUNT)*100)/(select SUM(BABY_COUNT) from NAMES_POPULARITY)
 from NAMES_POPULARITY
 inner join NAMES1 using(name_id) 
-GROUP BY NAME_BABY;
+GROUP BY NAME_BABY
 """
 cursor.execute(query2)
 
@@ -35,7 +35,7 @@ print("Запит 3 - Вивести динаміку загальної кіл�
 query3 ="""
 select BD_YEAR, SUM(BABY_COUNT)
 from NAMES_POPULARITY
-GROUP BY BD_YEAR;
+GROUP BY BD_YEAR
 
 """
 cursor.execute(query3)
