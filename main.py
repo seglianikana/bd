@@ -1,7 +1,7 @@
 import cx_Oracle
 
 username = 'SYSTEM'
-password = 'BatFat8882'
+password = '8882'
 database = 'localhost:1521/orcl'
 print('connection start')
 connection = cx_Oracle.connect(username, password, database)
